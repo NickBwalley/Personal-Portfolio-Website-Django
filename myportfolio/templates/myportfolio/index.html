@@ -129,11 +129,16 @@
                 <a href="#"><i class='bx bxl-instagram' ></a></i>
             </div>
             <div class="contact-form">
-                <form>
-                    <input type="text" placeholder="Name">
-                    <input type="email" placeholder="Your E-mail">
-                    <textarea name="" id="" cols="30" rows="10" placeholder="Your Message Here..."></textarea>
-                    <input type="button" value="Send" class="contact-button">
+                <form action="" method="post">
+                    {% csrf_token %}
+                  
+                    <label>Enter your name:</label>{{form.subject}}
+                    <label>Enter your email:</label>{{form.email}}
+                    <label>Enter your message:</label>{{form.message}}
+                    <input type="submit" value="Send" class="contact-button" onclick="alert('Message Successfully Sent!')">
+                    <script type="text/javascript">
+                      // alert("Message successfully submitted!!!");
+                    </script>
                 </form>
             </div>
         </div>

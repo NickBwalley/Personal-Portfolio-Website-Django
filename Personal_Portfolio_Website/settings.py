@@ -74,7 +74,7 @@ WSGI_APPLICATION = 'Personal_Portfolio_Website.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
-
+# AUTH_USER_MODEL = 'myportfolio.user_review'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
